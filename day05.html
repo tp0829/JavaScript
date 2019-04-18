@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!-- //js外部文件引入 -->
+    <script src="ws.js"></script>
+
+
+    <script type="text/javascript">
+        
+        alert("ssss");//浏览器 弹出警告框
+        document.write("llllll");//body 输出内容
+        console.log("kzt");//控制台 输出内容
+
+
+        // 声明变量
+        var a = 789;
+        
+        // 返回值是字符串:number string boolean 对象
+        //  null(专门表示空对象,返回的是对象类型)
+        //  undefined(声明但未赋值)
+        typeof a;
+
+        // 强制类型转换
+        //  - 调用toString()方法
+        //  - 调用String()函数
+        //  - parseInt() 将字符串中有效的整数部分取出来
+        //  - parseFloat() 小数
+        //  - Boolean()
+        //      - 对于数字  0和NaN为false,其余都为true
+        //      - 对于字符串 除了空串,其余都为true
+        //      - null和undefined转换为false
+        //      - 对象 转换为true
+
+        // 其他进制
+        //  - 0x 开头16进制
+        //  - 0  开头 8进制
+        //  - 0b 开头 2进制(但有些浏览器不支持)
+        //      - 像'070'之类的字符串用parseInt()解析,可能会解析成不同进制
+        //      - 解决方法 parseInt('070',10)两个参数
+
+
+        /* 运算符(操作符):算术运算符,逻辑运算符,赋值运算符,关系运算符,条件运算符(三元运算符)
+            - 运算符优先级:
+
+            - 算术运算符"+ - * /"四则运算,"%"取模(求余),"typeof,+,-,++,--"一元运算符
+                - "+"任何值和字符串相加都进行拼串,+号可以换行
+                - 对于非Number类型的先转换为Number再取负,故-true还是true
+            - 逻辑运算符"!"非,"&&"与,"||"或
+                - 短路效应
+                - 对于非布尔值,转化为布尔值进行运算,但返回的是原值(短路效应理解)
+                    - && 
+                    - 5 && 6 :6
+                    - 6 && 5 :7
+            - 赋值运算符"=","-=","*="
+            - 关系运算符">",">=","==","!=","==="全等(不进行类型转换)
+                - 任何数和NaN比都是false
+                - 其他都转换为数值进行比较
+                - 字符间依据编码顺序进行比较
+                - null == 0:false
+                - null == undefined:true
+                - NaN == NaN:false
+                    - isNaN()函数判断是不是NaN
+            - 条件运算符
+                - 语法: 条件表达式?语句1:语句2;
+            - ","逗号运算符
+
+        */
+        var a = -1>null;
+        console.log(a);
+
+        /* Unicode编码
+            - \u四位编码(十六进制)
+            - 在网页中使用Unicode &#编码(十进制)
+        
+        */
+        console.log("\u2620");
+
+        /* 语句
+            - 代码块 用一组大括号括起来{}
+            - 流程控制语句"if","switch","for/forIn(类似于python)","while/dowhile"
+            - break,continue
+                - 终结指定循环 break label;(加标签实现)
+        
+        
+        */
+        //测试程序性能
+        //console.time("计时器的名字")
+        //console.timeEnd("计时器的名字")
+
+        /* 对象
+            - 内建对象:ES标准中定义的对象
+            - 宿主对象:JS运行环境提供的对象,主要指由浏览器提供的对象
+                - 比如:BOM这一组,DOM这一组
+            - 自建对象
+                - new Object();来创建
+                - 对象字面量{};来创建
+        */
+        var obj = new Object();
+        var obj2 = {};
+
+        // in 运算符 检查对象中是否含有某属性
+
+        /*  - 基本数据类型
+                number string boolean null undefined
+            - 引用数据类型(浅复制)
+                对象
+        */
+
+
+        /* 函数function
+            - 函数也是一个对象
+                - var fun = new Function("代码字符串")
+                - fun()
+            - 语法
+                - function 函数名([形参1,形参2,...])
+            - return 执行完就退出该函数
+            - 立即执行函数
+                - (function(){})();
+    
+        */
+        var fun = new Function("代码字符串")
+
+        /* 作用域
+            - 全局作用域
+                - 全局作用域中有一个全局对象window,它由浏览器创建,我们可以直接使用
+                - 全局作用域中创建的变量都会作为window的属性,函数作为window的方法
+            - 函数作用域
+            
+        */
+
+        /* 声明提前
+            - 变量
+                使用var关键字声明的变量,会在所有代码执行前被声明(但不会被赋值)
+            - 函数
+                使用函数声明形式创建的函数function 函数名(){};会在代码执行前被创建,
+                可以在声明前直接调用
+        
+        */
+
+
+    </script>
+
+</head>
+<body>
+    <button onclick="alert('ssssssssss')">点我</button>
+</body>
+</html>

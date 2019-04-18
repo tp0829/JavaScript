@@ -20,3 +20,10 @@ git merge -D a
 git tag v1.0
 git tag
 git checkout v1.0
+
+push
+pull
+
+
+git remote add origin git@github.com:tp0829/JavaScrite.git
+git remote set-url origin git@github.com:tp0829/JavaScript.git
