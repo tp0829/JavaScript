@@ -46,4 +46,10 @@ git diff
 git stash
     git stash list
     git stash apply
-    
+    git stash drop
+    git stash pop
+    git stash clear
+
+merge & rebase
+
+
