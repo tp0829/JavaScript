@@ -17,6 +17,9 @@ git merge a
 git merge -d a
 git merge -D a
 
+
+
+
 git tag v1.0
 git tag
 git checkout v1.0
@@ -53,3 +56,6 @@ git stash
 merge & rebase
 
 
+git branch -D a    //git 删除本地分支
+
+git push origin :a  (origin 后面有空格) //git 删除远程分支
